@@ -11,13 +11,13 @@ The aim for this project
 
 ## Behavior Overview (latest versions only)
 
-| Platform | Connection Method | Default Browser | Details |
+| Platform | Captive Portal Display Method | Default Browser | Details |
 | --- | --- |
-| iOS | Mini-Browser | Websheet | [More Details](#ios) |
-| Android | :white_check_mark: | :x: | [More Details](#google-android) |
-| Samsung Android | :white_check_mark: | :x: | [More Details](#samsung-android) |
-| MacOS | :white_check_mark: | :x: | [More Details](#macos) |
-| Windows 10 | :white_check_mark: | :x: | [More Details](#windows10) |
+| iOS | Mini-Browser Popup | Websheet | [More Details](#ios) |
+| Android | Push Notification | Google Chrome | [More Details](#google-android) |
+| Samsung Android | Push Notification | Samsung Internet Browser | [More Details](#samsung-android) |
+| MacOS | Mini-Browser Popup | Safari | [More Details](#macos) |
+| Windows 10 | Manual Browser Redirect | User's Preferred Browser | [More Details](#windows10) |
 
 
 ## Contents

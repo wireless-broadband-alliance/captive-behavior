@@ -9,6 +9,15 @@ Public Wi-Fi networks offering short-term or temporary internet access commonly 
 The aim for this project is to define existing use cases for client devices and client manufacturers. 
 
 
+## Compatibility Matrix (example)
+
+| Platform | Feature1 | Feature2 | Feature 3 |
+| --- | --- |
+| iOS | :white_check_mark: | :white_check_mark: | :x: |
+| Android | :white_check_mark: | :x: | :white_check_mark:|
+| Windows | :white_check_mark: | :x: | :white_check_mark:|
+
+
 ## Contents
 
 - [Existing Device Behavior](#existing)

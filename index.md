@@ -73,9 +73,8 @@ The aim for this project
 <a name="fireos"></a>
 {% include fireos.md %}
 
-<a name="captive-portal-urls"></a>
+<a name="urls"></a>
 {% include urls.md %}
-
 
 <a name="contribute"></a>
 ## How to Contribute

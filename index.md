@@ -1,8 +1,8 @@
 ## Background
 
-Public Wi-Fi networks offering temporary internet access commonly begin new connections using a Captive Portal Mini-Browser (or "CPMB"). These utilities are built into operating systems in an attempt to make it easier to connect to public Wi-Fi networks. The problem is that their behavior is highly nuanced, often undocumented and can be difficult to understand. The goal for this project is to document how client devices behave in captive portal environments.
+Public Wi-Fi networks offering temporary internet access commonly begin new connections using a Captive Portal Mini-Browser (or "CPMB"). These utilities are built into operating systems in order to make it easier to connect to public Wi-Fi networks. The problem is that their behavior is highly nuanced, often undocumented and can be difficult to understand. The goal for this project is to document captive portal behavior across the various client devices, and to hopefully make it easier to build captive portal solutions that offer a better experience for users.
 
-## Behavior Overview (latest versions only)
+## Behavior Overview (latest versions)
 
 | Platform | Captive Portal Display Method | Default Browser | Details |
 | --- | --- |
@@ -10,7 +10,7 @@ Public Wi-Fi networks offering temporary internet access commonly begin new conn
 | Android | Push Notification | Google Chrome | [More Details](#android-google) |
 | Samsung Android | Push Notification | Samsung Internet Browser | [More Details](#android-samsung) |
 | MacOS | Mini-Browser Popup | Safari | [More Details](#macos) |
-| Windows 10 | Manual Browser Redirect | User's Preferred Browser | [More Details](#windows10) |
+| Windows 10 | Manual Browser Redirect | User's Preferred Browser | [More Details](#windows) |
 
 
 ## Contents
@@ -42,7 +42,7 @@ Public Wi-Fi networks offering temporary internet access commonly begin new conn
 
  * The CPMB disappears and the device disconnects from the network when focus is changed to another app, such as SMS or email.
 
- * Most of external services (file system, applications and etc.) are not accessible from CPMB. There are various differences in device behavior in pre-authentiecated vs post-authenticated states, along with many limitations including memory usage, local storage, Javascript support etc.
+ * Most external services (file system, applications and etc.) are not accessible from CPMB. There are various differences in device behavior in pre-authentiecated vs post-authenticated states, along with many limitations including memory usage, local storage, Javascript support etc.
 
 
 <a name="ios"></a>

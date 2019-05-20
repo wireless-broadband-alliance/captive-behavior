@@ -6,8 +6,9 @@ The goal for this project is to document captive portal behavior across the vari
 
 ## Contents
 
-- [CPMB Connection Process](#connect-process)
-- [Existing Device Behavior](#existing)
+- [Connection Process](#connection-process)
+- [Device Behavior Summary](#behavior-summary)
+- [Device Behavior](#device-behavior)
   - [iOS](#ios)
   - [Android (Google)](#android-google)
   - [Android (Samsung)](#android-samsung)
@@ -23,7 +24,7 @@ The goal for this project is to document captive portal behavior across the vari
 
 
 <a name="connection-process"></a>
-## The CPMB Connection Process
+## Connection Process
 
 The connection process for the CPMB usually involves the following steps:
 
@@ -37,7 +38,9 @@ The connection process for the CPMB usually involves the following steps:
 
 ![CPMB Connection Process Diagram](/assets/images/cpmb-process-diagram.png)
 
-## CPMB Behavior Matrix (latest versions)
+
+<a name="behavior-summary"></a>
+## Device Behavior Summary (latest versions)
 
 | Platform | Captive Portal Display Method | Default Browser | Details |
 | --- | --- |
@@ -48,9 +51,9 @@ The connection process for the CPMB usually involves the following steps:
 | Windows 10 | Manual Browser Redirect | User's Preferred Browser | [More Details](#windows) |
 
 
-<a name="existing"></a>
-## Existing Device Behavior
-s
+<a name="device-behavior"></a>
+## Device Behavior
+
 ### General Behavior (for most devices)
 
  * There are no persistent cookies in CPMB: all the written cookies are destroyed after CPMB closes.

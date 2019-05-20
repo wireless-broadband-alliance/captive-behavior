@@ -1,11 +1,12 @@
-## WIRELESS BROADBAND ALLIANCE REPOSITORY
+# How to Contribute
 
+We encourage anyone to contribute new content to this repository or provide feedback on existing content.
 
----
+The easiest way to contribute is to simply open a Github "Issue" in the [Issues Tab](https://github.com/wireless-broadband-alliance/captive-behavior/issues) with your new content or feedback. A WBA reviewer will respond to the Issue and update/add content as necessary.
 
-### WORKING PROCEDURES
+You can also create a Pull Request by following the process below.
 
----
+## Pull Request Process
 
 Please ensure that you adhere to the following when submitting changes to this repository.
 
@@ -17,16 +18,17 @@ Please ensure that you adhere to the following when submitting changes to this r
 - Every Pull Request MUST include at least [3] **WBA reviewers** from the list below
 - Additional reviewers may be added, as determined by the pull request initiator
 
----
+
+## WBA Reviewers
 
 The current list of **WBA reviewers** is:
 
-    1. some name
-    2. some other name
+    1. <TBD>
+    2. <TBD>
+    3. <TBD>
 
 
-----
-## PULL REQUEST TEMPLATE
+## Pull Request Template
 
 | Field | Description |
 | ------ | ----------- |

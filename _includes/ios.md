@@ -4,7 +4,7 @@
 
  * After receiving an IP-address, the device goes to check `http://captive.apple.com/hotspot-detect.html` (exact domain and URI could be different from this one: see appendix for complete list) via so-called CNA Helper. 
 
- * In this request the device uses a specific User-Agent: “CaptiveNetworkSupport-355.200.27 wispr” (the version mentioned could be different). The received answer is analyzed to verify if Web-authorization existence and in case of detection, Wi-Fi network marks as captive (appropriate switches appears in the network settings), and switching from cellular connection to Wi-Fi doesn’t appear otherwise the device switches to the Wi-Fi connection as major one.
+ * In this request the device uses a specific User-Agent: "CaptiveNetworkSupport-355.200.27 wispr" (the version mentioned could be different). The received answer is analyzed to verify if the existence of Web-authorization and in case of detection, Wi-Fi network marks as captive (appropriate switches appears in the network settings), and switching from cellular connection to Wi-Fi doesn’t appear otherwise the device switches to the Wi-Fi connection as major one.
 
  * In the case of association with a known Captive Network SSID when the device is not active (in a locked state in a pocket, for example), there are no further requests produced by device before unlocking. After this device is unlocked, additional checking requests are made and in case of Web-authorization confirms, CPMB is rising.
 

@@ -4,6 +4,15 @@ Public Wi-Fi networks offering temporary internet access often begin new connect
 
 The goal for this project is to document captive portal behavior across the various client devices and to hopefully *make it easier to build captive portal solutions that offer a better experience for users*.
 
+## Organized by the WBA
+
+![WBA Logo](/assets/images/wba-logo.png)
+
+This project is organized by the [Wireless Broadband Alliance](https://www.wballiance.com/)(WBA).The aim of the WBA, together with its 100+ members, is to secure an outstanding user experience through the global deployment of next generation Wireless.
+
+While the WBA organizes this project, anyone is encouraged to contribute. Please see the [contribution guidelines](/CONTRIBUTING.md) to learn how.
+
+
 ## Contents
 
 - [Connection Process](#connection-process)
@@ -18,7 +27,6 @@ The goal for this project is to document captive portal behavior across the vari
   - [FireOS](#fireos)
   - [Linux](#linux)  
 - [List of Captive Portal Check URLs](#urls)
-- [How to Contribute](#contribute)
 - [Code of Conduct](#conduct)
 - [License](#license)
 
@@ -92,10 +100,6 @@ The connection process for the CPMB usually involves the following steps:
 <a name="urls"></a>
 {% include urls.md %}
 
-<a name="contribute"></a>
-## How to Contribute
-
-Find something that needs to be updated or want to add more details for a specific platform? Please do! More details coming soon on how to contribute.
 
 <a name="conduct"></a>
 ## Code of Conduct

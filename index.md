@@ -62,7 +62,7 @@ The connection process for the CPMB usually involves the following steps:
 
  * The CPMB disappears and the device disconnects from the network when focus is changed to another app, such as SMS or email.
 
- * Most external services (file system, applications and etc.) are not accessible from CPMB. There are various differences in device behavior in pre-authentiecated vs post-authenticated states, along with many limitations including memory usage, local storage, Javascript support etc.
+ * Most external services (file system, applications and etc.) are not accessible from CPMB. There are various differences in device behavior in pre-authenticated vs post-authenticated states, along with many limitations including memory usage, local storage, Javascript support etc.
 
 
 <a name="ios"></a>

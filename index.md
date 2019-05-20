@@ -1,20 +1,12 @@
-## Background
+## Overview
 
-Public Wi-Fi networks offering temporary internet access commonly begin new connections using a Captive Portal Mini-Browser (or "CPMB"). These utilities are built into operating systems in order to make it easier to connect to public Wi-Fi networks. The problem is that their behavior is highly nuanced, often undocumented and can be difficult to understand. The goal for this project is to document captive portal behavior across the various client devices, and to hopefully make it easier to build captive portal solutions that offer a better experience for users.
+Public Wi-Fi networks offering temporary internet access often begin new connections using a Captive Portal Mini-Browser (or "CPMB"). These CPMB utilities are built into operating systems in order to make it easier to connect to public Wi-Fi networks. The problem is that their behavior is nuanced, often undocumented and can be difficult to understand. 
 
-## Behavior Overview (latest versions)
-
-| Platform | Captive Portal Display Method | Default Browser | Details |
-| --- | --- |
-| iOS | Mini-Browser Popup | Websheet | [More Details](#ios) |
-| Android | Push Notification | Google Chrome | [More Details](#android-google) |
-| Samsung Android | Push Notification | Samsung Internet Browser | [More Details](#android-samsung) |
-| MacOS | Mini-Browser Popup | Safari | [More Details](#macos) |
-| Windows 10 | Manual Browser Redirect | User's Preferred Browser | [More Details](#windows) |
-
+The goal for this project is to document captive portal behavior across the various client devices and to hopefully *make it easier to build captive portal solutions that offer a better experience for users*.
 
 ## Contents
 
+- [CPMB Connection Process](#connect-process)
 - [Existing Device Behavior](#existing)
   - [iOS](#ios)
   - [Android (Google)](#android-google)
@@ -30,10 +22,35 @@ Public Wi-Fi networks offering temporary internet access commonly begin new conn
 - [License](#license)
 
 
+<a name="connection-process"></a>
+## The CPMB Connection Process
+
+The connection process for the CPMB usually involves the following steps:
+
+ * Network/Access Point Association
+ * Checking connectivity state (detection of Captive Network)
+ * Pop-up of a notification (in some cases)
+ * Waiting for device activation (if device is in a blocked state)
+ * Opening CPMB or waiting for the activation of the notification
+ * Checking current connectivity state based on user's action while CPMB is open
+ * Closing CPMB after authentication process is completed (automatically or manually)
+
+![CPMB Connection Process Diagram](/assets/images/cpmb-process-diagram.png)
+
+## CPMB Behavior Matrix (latest versions)
+
+| Platform | Captive Portal Display Method | Default Browser | Details |
+| --- | --- |
+| iOS | Mini-Browser Popup | Websheet | [More Details](#ios) |
+| Android | Push Notification | Google Chrome | [More Details](#android-google) |
+| Samsung Android | Push Notification | Samsung Internet Browser | [More Details](#android-samsung) |
+| MacOS | Mini-Browser Popup | Safari | [More Details](#macos) |
+| Windows 10 | Manual Browser Redirect | User's Preferred Browser | [More Details](#windows) |
+
+
 <a name="existing"></a>
 ## Existing Device Behavior
-
-
+s
 ### General Behavior (for most devices)
 
  * There are no persistent cookies in CPMB: all the written cookies are destroyed after CPMB closes.

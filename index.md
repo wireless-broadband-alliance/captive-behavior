@@ -1,13 +1,6 @@
-## Purpose
-
-Public Wi-Fi networks offering temporary internet access commonly begin new connections using a Captive Portal Mini-Browser (or "CPMB"). These utilities are built into operating systems in an attempt to make it easier to connect to public Wi-Fi networks. The problem is that their behavior is nuanced, largely undocumented and changes frequently. The aim for this project is to document how client devices behave in captive portal environments.
-
 ## Background
 
-This also happens in fixed and cellular networks in the case of insufficient balance for prepaid tariff plans. Each platform has a native version that is "baked" into the OS. There are also commercial browsers, like Firefox and Chrome that have built-in support to detect and navigate to the Captive Portal. This mode uses a web-view pushed to the client and has limited capabilities for branding, advertising and other monetization tactics along with limited capabilities with special authorization processes and paid access.
-
-The aim for this project 
-
+Public Wi-Fi networks offering temporary internet access commonly begin new connections using a Captive Portal Mini-Browser (or "CPMB"). These utilities are built into operating systems in an attempt to make it easier to connect to public Wi-Fi networks. The problem is that their behavior is highly nuanced, often undocumented and can be difficult to understand. The goal for this project is to document how client devices behave in captive portal environments.
 
 ## Behavior Overview (latest versions only)
 

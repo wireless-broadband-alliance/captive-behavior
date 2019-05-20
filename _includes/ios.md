@@ -1,4 +1,5 @@
- ##### iOS (latest)
+
+##### iOS (latest)
 
  * Standard flow for Captive Network authorization process starts from Wi-Fi association. It doesn’t matter what kind of Wi-Fi association protocol is used (Hotspot 2.0 or other): in all cases just after the association is complete, the device making a request for IP-address (DHCP DISCOVER).
 

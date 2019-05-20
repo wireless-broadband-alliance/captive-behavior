@@ -7,8 +7,8 @@ Public Wi-Fi networks offering temporary internet access commonly begin new conn
 | Platform | Captive Portal Display Method | Default Browser | Details |
 | --- | --- |
 | iOS | Mini-Browser Popup | Websheet | [More Details](#ios) |
-| Android | Push Notification | Google Chrome | [More Details](#google-android) |
-| Samsung Android | Push Notification | Samsung Internet Browser | [More Details](#samsung-android) |
+| Android | Push Notification | Google Chrome | [More Details](#android-google) |
+| Samsung Android | Push Notification | Samsung Internet Browser | [More Details](#android-samsung) |
 | MacOS | Mini-Browser Popup | Safari | [More Details](#macos) |
 | Windows 10 | Manual Browser Redirect | User's Preferred Browser | [More Details](#windows10) |
 

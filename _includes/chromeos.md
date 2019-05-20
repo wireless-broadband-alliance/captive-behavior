@@ -1,4 +1,4 @@
-##### Chrome OS
+### Chrome OS
 
  * Connection manager for Chrome OS attempts to retrieve the web page [http://clients3.google.com/generate_204](http://clients3.google.com/generate_204). This well known URL is known to return an empty page with an HTTP status 204. If for any reason the web page is not returned, or an HTTP response other than 204 is received, then shill marks the service as being in the portal state.
 

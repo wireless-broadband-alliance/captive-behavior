@@ -1,4 +1,4 @@
-##### Android (Google)
+### Android (Google)
 
  * The Android OS determines the existence of the captive portal by attempting to access a list of domains (See appendix for complete list). If the domains are accessible, it can assume that it is not constrained by a captive portal. Otherwise, it will trigger the notification.
  

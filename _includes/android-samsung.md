@@ -1,4 +1,4 @@
-##### Android (Samsung)
+### Android (Samsung)
 
  * Active Captive Portal - Notifies user about the need to log in by pushing the OS-level mini browser.
 

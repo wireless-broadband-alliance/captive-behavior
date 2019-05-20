@@ -1,4 +1,4 @@
-##### FireOS
+### FireOS
 
 * Fire OS (based on Android) uses http://spectrum.s3.amazonaws.com/kindle-wifi/wifistub.html for connectivity checks and if the URI is not reachable, a notification appears indicating a captive portal login is required.
 

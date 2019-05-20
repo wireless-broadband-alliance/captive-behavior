@@ -1,4 +1,4 @@
-##### MacOS
+### MacOS
 
  * Native Mini-Browser – AKA “Captive Network Assistant” (CNA) - Notifies user about the need to log in by pushing the OS-level mini browser.
 

@@ -1,5 +1,4 @@
-
-##### iOS (latest)
+### iOS (latest)
 
  * Standard flow for Captive Network authorization process starts from Wi-Fi association. It doesn’t matter what kind of Wi-Fi association protocol is used (Hotspot 2.0 or other): in all cases just after the association is complete, the device making a request for IP-address (DHCP DISCOVER).
 
@@ -17,10 +16,12 @@
 
 ##### iOS
  > With VPN or some other software that blocks Captive Detector Installed
- * Normally, there is a local Push-notification raise instead of CPMB.
- * Observed in iOS 11+
+
+* Normally, there is a local Push-notification raise instead of CPMB.
+* Observed in iOS 11+
 
 ##### iOS
  > With "Auto-connect" selector in the Wi-Fi SSID settings switched off.
- * The CPMB does not display automatically. Manual redirection from a browser is needed.
- * Observed in iOS 6+
+
+* The CPMB does not display automatically. Manual redirection from a browser is needed.
+* Observed in iOS 6+

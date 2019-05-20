@@ -33,9 +33,12 @@ Public Wi-Fi networks offering temporary internet access commonly begin new conn
 <a name="existing"></a>
 ## Existing Device Behavior
 
+
+### General Behavior (for most devices)
+
  * There are no persistent cookies in CPMB: all the written cookies are destroyed after CPMB closes.
 
- * CPMB closes after authorization is completed (sometimes it needed additional actions from the user)
+ * CPMB closes after authorization is completed (sometimes it requires additional actions from the user)
 
  * The CPMB disappears and the device disconnects from the network when focus is changed to another app, such as SMS or email.
 

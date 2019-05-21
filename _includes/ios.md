@@ -14,13 +14,13 @@
 
  * Sometimes, after several connections to the Wi-Fi network without Captive Portal with the same SSID as used in Captive Network, iOS may switch off Captive Checker for this particular SSID and there will no Captive Browser rising
 
-##### iOS
+##### iOS (With VPN)
  > With VPN or some other software that blocks Captive Detector Installed
 
 * Normally, there is a local Push-notification raise instead of CPMB.
 * Observed in iOS 11+
 
-##### iOS
+##### iOS (With "Auto-Connect" disabled)
  > With "Auto-connect" selector in the Wi-Fi SSID settings switched off.
 
 * The CPMB does not display automatically. Manual redirection from a browser is needed.

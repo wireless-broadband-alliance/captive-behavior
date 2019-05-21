@@ -15,23 +15,21 @@ While the WBA organizes this project, anyone is encouraged to contribute. Please
 
 ## Contents
 
-- [Connection Process](#connection-process)
-- [Device Behavior Summary](#behavior-summary)
-- [Device Behavior](#device-behavior)
-  - [iOS](#ios)
-  - [Android (Google)](#android-google)
-  - [Android (Samsung)](#android-samsung)
-  - [MacOS](#macos)
-  - [Windows](#windows)
-  - [ChromeOS](#chromeos)
-  - [FireOS](#fireos)
-  - [Linux](#linux)  
-- [List of Captive Portal Check URLs](#urls)
-- [Code of Conduct](#conduct)
-- [License](#license)
+- [Connection Process](#connection-process-anchor)
+- [Device Behavior Summary](#behavior-summary-anchor)
+- [Device Behavior](#device-behavior-anchor)
+  - [iOS](#ios-anchor)
+  - [Android (Google)](#android-google-anchor)
+  - [Android (Samsung)](#android-samsung-anchor)
+  - [MacOS](#macos-anchor)
+  - [Windows](#windows-anchor)
+  - [ChromeOS](#chromeos-anchor)
+  - [FireOS](#fireos-anchor)
+  - [Linux](#linux-anchor)  
+- [List of Captive Portal Check URLs](#urls-anchor)
 
 
-<a name="connection-process"></a>
+<a name="connection-process-anchor"></a>
 ## Connection Process
 
 The connection process for the CPMB usually involves the following steps:
@@ -47,19 +45,19 @@ The connection process for the CPMB usually involves the following steps:
 ![CPMB Connection Process Diagram](/assets/images/cpmb-process-diagram.png)
 
 
-<a name="behavior-summary"></a>
+<a name="behavior-summary-anchor"></a>
 ## Device Behavior Summary (latest versions)
 
 | Platform | Captive Portal Display Method | Default Browser | Details |
 | --- | --- |
-| iOS | Mini-Browser Popup | Websheet | [More Details](#ios) |
-| Android | Push Notification | Google Chrome | [More Details](#android-google) |
-| Samsung Android | Push Notification | Samsung Internet Browser | [More Details](#android-samsung) |
-| MacOS | Mini-Browser Popup | Safari | [More Details](#macos) |
-| Windows 10 | Manual Browser Redirect | User's Preferred Browser | [More Details](#windows) |
+| iOS | Mini-Browser Popup | Websheet | [More Details](#ios-anchor) |
+| Android | Push Notification | Google Chrome | [More Details](#android-google-anchor) |
+| Samsung Android | Push Notification | Samsung Internet Browser | [More Details](#android-samsung-anchor) |
+| MacOS | Mini-Browser Popup | Safari | [More Details](#macos-anchor) |
+| Windows 10 | Manual Browser Redirect | User's Preferred Browser | [More Details](#windows-anchor) |
 
 
-<a name="device-behavior"></a>
+<a name="device-behavior-anchor"></a>
 ## Device Behavior
 
 ### General Behavior (for most devices)
@@ -72,29 +70,29 @@ The connection process for the CPMB usually involves the following steps:
 
  * Most external services (file system, applications and etc.) are not accessible from CPMB. There are various differences in device behavior in pre-authenticated vs post-authenticated states, along with many limitations including memory usage, local storage, Javascript support etc.
 
-<a name="ios"></a>
+<a name="ios-anchor"></a>
 {% include ios.md %}
 
-<a name="android-google"></a>
+<a name="android-google-anchor"></a>
 {% include android-google.md %}
 
-<a name="android-samsung"></a>
+<a name="android-samsung-anchor"></a>
 {% include android-samsung.md %}
 
-<a name="macos"></a>
+<a name="macos-anchor"></a>
 {% include macos.md %}
 
-<a name="windows"></a>
+<a name="windows-anchor"></a>
 {% include windows.md %}
 
-<a name="chromeos"></a>
+<a name="chromeos-anchor"></a>
 {% include chromeos.md %}
 
-<a name="linux"></a>
+<a name="linux-anchor"></a>
 {% include linux.md %}
 
-<a name="fireos"></a>
+<a name="fireos-anchor"></a>
 {% include fireos.md %}
 
-<a name="urls"></a>
+<a name="urls-anchor"></a>
 {% include urls.md %}

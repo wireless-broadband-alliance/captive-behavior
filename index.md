@@ -8,9 +8,9 @@ The goal for this project is to document captive portal behavior across the vari
 
 ![WBA Logo](/assets/images/wba-logo.png)
 
-This project is organized by the [Wireless Broadband Alliance](https://www.wballiance.com/)(WBA). The aim of the WBA, together with its 100+ members, is to secure an outstanding user experience through the global deployment of next generation Wireless.
+This project is organized by the [Wireless Broadband Alliance](https://www.wballiance.com/)(WBA). The aim of the WBA, together with its 100+ members, is to secure an outstanding user experience through the global deployme`nt of next generation Wireless.
 
-While the WBA organizes this project, anyone is encouraged to contribute. Please see the [contribution guidelines](CONTRIBUTING.md) to learn how.
+While the WBA organizes this project, anyone is encouraged to contribute. Please see the [GitHub repoository](https://github.com/wireless-broadband-alliance/captive-behavior) to learn how.
 
 
 ## Contents
@@ -72,7 +72,6 @@ The connection process for the CPMB usually involves the following steps:
 
  * Most external services (file system, applications and etc.) are not accessible from CPMB. There are various differences in device behavior in pre-authenticated vs post-authenticated states, along with many limitations including memory usage, local storage, Javascript support etc.
 
-
 <a name="ios"></a>
 {% include ios.md %}
 
@@ -99,16 +98,3 @@ The connection process for the CPMB usually involves the following steps:
 
 <a name="urls"></a>
 {% include urls.md %}
-
-
-<a name="conduct"></a>
-## Code of Conduct
-
-Please note that this project is released with a [Contributor Code of Conduct](CODE-OF-CONDUCT.md). By participating in this project you agree to abide by its terms.
-
-<a name="license"></a>
-## License
-
-[![CC0](http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
-
-To the extent possible under law, [TBD](https://tbd.com/) has waived all copyright and related or neighboring rights to this work.

@@ -22,9 +22,10 @@ Please ensure that you adhere to the following when submitting changes to this r
 
 The current list of **WBA reviewers** is:
 
-    1. <TBD>
-    2. <TBD>
-    3. <TBD>
+    1. Brian Shields, Boingo Wireless, Captive Behavior Project Leader
+    2. Ilya Volynkin, Maxima Telecom, Project Co-Lead
+    3. Tim Cappalli, Aruba/HPE, Project Co-Lead
+    4. Chris Spencer, Globalreach, Project Co-Lead
 
 
 ## Pull Request Template

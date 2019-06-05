@@ -26,6 +26,7 @@ The current list of **WBA reviewers** is:
     2. Ilya Volynkin, Maxima Telecom, Project Co-Lead
     3. Tim Cappalli, Aruba/HPE, Project Co-Lead
     4. Chris Spencer, Globalreach, Project Co-Lead
+    5. Alex Meub, Eleven Software, Editorial Team
 
 
 ## Pull Request Template

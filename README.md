@@ -12,7 +12,7 @@ The goal for this project is to document captive portal behavior across the vari
 
 This project is organized by the [Wireless Broadband Alliance](https://www.wballiance.com/) (WBA). The aim of the WBA, together with its 100+ members, is to secure an outstanding user experience through the global deployment of next generation Wireless.
 
-While the WBA organizes this project, anyone is encouraged to contribute. Please see the [contribution guidelines](CONTRIBUTING.md) to learn how.
+While the WBA organizes this project, anyone is encouraged to contribute. Please see the [contribution guidelines](CONTRIBUTING.md) to learn how or contact the [WBA](https://www.wballiance.com/contact-us/) to find out more.
 
 ## Code of Conduct
 

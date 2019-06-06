@@ -7,3 +7,18 @@
 .inner {
 	max-width:860px;
 }
+
+#top-header {
+	background: #0061a1;
+    height: 50px;
+    padding: 0;
+    position: relative;
+}
+
+#top-header img {
+	padding: 0;
+    height: 50px;
+    margin: 0;
+    position: absolute;
+    right: 0;
+}

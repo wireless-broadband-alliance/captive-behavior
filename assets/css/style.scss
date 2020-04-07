@@ -3,6 +3,9 @@
 
 @import "{{ site.theme }}";
 
+body,h1, h2, h3, h4, h5, h6 {
+    font-family: 'Asap', sans-serif !important;
+}
 
 .inner {
 	max-width:860px;
@@ -24,3 +27,4 @@
     border:none;
     box-shadow: none;
 }
+

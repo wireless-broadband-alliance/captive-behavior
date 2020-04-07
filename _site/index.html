@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=f7966a6c56439dd36bb9aeca192e3d8fcc8cc7a6">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Overview | captive-behavior</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Overview" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Documentation of captive network portal behavior on different devices" />
+<meta property="og:description" content="Documentation of captive network portal behavior on different devices" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="captive-behavior" />
+<script type="application/ld+json">
+{"headline":"Overview","description":"Documentation of captive network portal behavior on different devices","name":"captive-behavior","@type":"WebSite","url":"http://localhost:4000/","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <!-- Global header -->
+    <div id="top_header">
+      <img src="/assets/images/wba-logo-small.png">
+    </div>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          
+            <!--<a id="forkme_banner" href="https://github.com/wireless-broadband-alliance/captive-behavior">View on GitHub</a>-->
+          
+
+          <h1 id="project_title">Captive Network Portal Behavior</h1>
+          <h2 id="project_tagline">Documentation of captive network portal behavior on different devices</h2>
+
+          
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2 id="overview">Overview</h2>
+
+<p>Public Wi-Fi networks offering temporary internet access often begin new connections using a Captive Portal Mini-Browser (or “CPMB”). These CPMB utilities are built into operating systems in order to make it easier to connect to public Wi-Fi networks. The problem is that their behavior is nuanced, often undocumented and can be difficult to understand.</p>
+
+<p>The goal for this project is to document captive portal behavior across the various client devices and to hopefully <em>make it easier to build captive portal solutions that offer a better experience for users</em>.</p>
+
+<h2 id="organized-by-the-wba">Organized by the WBA</h2>
+
+<p><img src="/assets/images/wba-logo.png" alt="WBA Logo" /></p>
+
+<p>This project is organized by the <a href="https://www.wballiance.com/">Wireless Broadband Alliance</a> (WBA). The aim of the WBA, together with its 100+ members, is to secure an outstanding user experience through the global deployment of next generation Wireless. While the WBA organizes this project, anyone is encouraged to contribute. Please see the <a href="https://github.com/wireless-broadband-alliance/captive-behavior">GitHub repository</a> to learn how or contact the <a href="https://www.wballiance.com/contact-us/">WBA</a> to find out more.</p>
+
+<h2 id="captive-network-portal-standards-whitepaper">Captive Network Portal Standards Whitepaper</h2>
+
+<p><a href="https://wballiance.com/captive-network-portal-standards/" style="float:right; padding:0 15px;"><img src="/assets/images/captive-portal-standards-whitepaper.png" style="width:170px;" /></a></p>
+
+<p>The <a href="https://wballiance.com/captive-network-portal-standards/">Captive Network Portal Standards whitepaper</a> defines existing use cases, aligns user experience (UX), presents practices to consider and provides suggested guidelines for future features that can be adopted as a unified standard by client devices, client manufacturers and network hardware manufacturers.</p>
+
+<p>The <a href="https://wballiance.com/captive-portal-onboarding-evolution/">Captive Portal - Onboarding Evolution</a> WBA workgroup is continuing to focus on improving the user experience of “captivation” and how end-users engage with captive portals in the Passpoint® era. You can learn more about the team behind the Captive Network Portal Standards project and the above whitepaper <a href="https://wballiance.com/captive-portal-onboarding-evolution/">here</a>.</p>
+
+<h2 id="contents">Contents</h2>
+
+<ul>
+  <li><a href="#connection-process-anchor">Connection Process</a></li>
+  <li><a href="#behavior-summary-anchor">Device Behavior Summary</a></li>
+  <li><a href="#device-behavior-anchor">Device Behavior</a>
+    <ul>
+      <li><a href="#ios-anchor">iOS</a></li>
+      <li><a href="#android-google-anchor">Android (Google)</a></li>
+      <li><a href="#android-samsung-anchor">Android (Samsung)</a></li>
+      <li><a href="#macos-anchor">MacOS</a></li>
+      <li><a href="#windows-anchor">Windows</a></li>
+      <li><a href="#chromeos-anchor">ChromeOS</a></li>
+      <li><a href="#fireos-anchor">FireOS</a></li>
+      <li><a href="#linux-anchor">Linux</a></li>
+    </ul>
+  </li>
+  <li><a href="#urls-anchor">List of Captive Portal Check URLs</a></li>
+</ul>
+
+<p><a name="connection-process-anchor"></a></p>
+<h2 id="connection-process">Connection Process</h2>
+
+<p>The connection process for the CPMB usually involves the following steps:</p>
+
+<ul>
+  <li>Network/Access Point Association</li>
+  <li>Checking connectivity state (detection of Captive Network)</li>
+  <li>Pop-up of a notification (in some cases)</li>
+  <li>Waiting for device activation (if device is in a blocked state)</li>
+  <li>Opening CPMB or waiting for the activation of the notification</li>
+  <li>Checking current connectivity state based on user’s action while CPMB is open</li>
+  <li>Closing CPMB after authentication process is completed (automatically or manually)</li>
+</ul>
+
+<p><img src="/assets/images/cpmb-process-diagram.png" alt="CPMB Connection Process Diagram" /></p>
+
+<p><a name="behavior-summary-anchor"></a></p>
+<h2 id="device-behavior-summary-latest-versions">Device Behavior Summary (latest versions)</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Platform</th>
+      <th>Captive Portal Display Method</th>
+      <th>Default Browser</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>iOS</td>
+      <td>Mini-Browser Popup</td>
+      <td>Websheet</td>
+      <td><a href="#ios-anchor">More Details</a></td>
+    </tr>
+    <tr>
+      <td>Android</td>
+      <td>Push Notification</td>
+      <td>Google Chrome</td>
+      <td><a href="#android-google-anchor">More Details</a></td>
+    </tr>
+    <tr>
+      <td>Samsung Android</td>
+      <td>Push Notification</td>
+      <td>Samsung Internet Browser</td>
+      <td><a href="#android-samsung-anchor">More Details</a></td>
+    </tr>
+    <tr>
+      <td>MacOS</td>
+      <td>Mini-Browser Popup</td>
+      <td>Safari</td>
+      <td><a href="#macos-anchor">More Details</a></td>
+    </tr>
+    <tr>
+      <td>Windows 10</td>
+      <td>Manual Browser Redirect</td>
+      <td>User’s Preferred Browser</td>
+      <td><a href="#windows-anchor">More Details</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a name="device-behavior-anchor"></a></p>
+<h2 id="device-behavior">Device Behavior</h2>
+
+<h3 id="general-behavior-for-most-devices">General Behavior (for most devices)</h3>
+
+<ul>
+  <li>
+    <p>There are no persistent cookies in CPMB: all the written cookies are destroyed after CPMB closes.</p>
+  </li>
+  <li>
+    <p>CPMB closes after authorization is completed (sometimes it requires additional actions from the user)</p>
+  </li>
+  <li>
+    <p>The CPMB disappears and the device disconnects from the network when focus is changed to another app, such as SMS or email.</p>
+  </li>
+  <li>
+    <p>Most external services (file system, applications and etc.) are not accessible from CPMB. There are various differences in device behavior in pre-authenticated vs post-authenticated states, along with many limitations including memory usage, local storage, Javascript support etc.</p>
+  </li>
+</ul>
+
+<p><a name="ios-anchor"></a></p>
+<h3 id="ios-latest">iOS (latest)</h3>
+
+<ul>
+  <li>
+    <p>The standard flow for the Captive Network authentication process starts with Wi-Fi association. It doesn’t matter what kind of Wi-Fi association protocol is used (Hotspot 2.0 or other), in all cases just after the association is complete, the device makes a request for an IP-address (DHCP DISCOVER).</p>
+  </li>
+  <li>
+    <p>After receiving an IP-address, the device goes to check <code class="language-plaintext highlighter-rouge">http://captive.apple.com/hotspot-detect.html</code> (exact domain and URI could be different from this one: see appendix for complete list) via so-called CNA Helper.</p>
+  </li>
+  <li>
+    <p>In this request the device uses a specific User-Agent: “CaptiveNetworkSupport-355.200.27 wispr” (the version mentioned could be different). The received answer is analyzed to verify if the existence of Web-authorization and in case of detection, Wi-Fi network marks as captive (appropriate switches appears in the network settings), and switching from cellular connection to Wi-Fi doesn’t appear otherwise the device switches to the Wi-Fi connection as major one.</p>
+  </li>
+  <li>
+    <p>In the case of association with a known Captive Network SSID when the device is not active (in a locked state in a pocket, for example), there are no further requests produced by device before unlocking. After this device is unlocked, additional checking requests are made and in case of Web-authorization confirms, CPMB is rising.</p>
+  </li>
+  <li>
+    <p>When CPMB is risen it generate additional request to http://captive.apple.com/hotspot-detect.html (see appendix for complete list) but with different kind of User-Agent: “Mozilla/5.0 (iPhone; CPU iPhone OS 12_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/16A366” (the version mentioned could be different). During authorization process in CPMB, almost all network actions followed by additional checks of current state.</p>
+  </li>
+  <li>
+    <p>When the CPMB detects that the captive domain is accessible, it changes the control button in the top right corner from “Cancel” to “Done” and switches the primary connection from cellular network to Wi-Fi. The CPMB only performs a check of the captive domain after a full URL navigation or by timer. A javascript-triggered AJAX call for example will not result in the CPMB performing an additional check of the captive domain. With a single page app that does not redirect to a separate post-authentication landing page, a full page navigation must occur for the CPMB to change the control button from “Cancel’ to “Done”. If this doesn’t happen, the user’s device will be authenticated and connected to Wi-Fi but the CPMB will only provide the “Cancel” option, which will disassociate the device from the SSID and take the user back the Wi-Fi network selection screen in the Settings menu.</p>
+  </li>
+  <li>
+    <p>Sometimes, after several connections to the Wi-Fi network without Captive Portal with the same SSID as used in Captive Network, iOS may switch off Captive Checker for this particular SSID and there will no Captive Browser rising</p>
+  </li>
+</ul>
+
+<h5 id="ios-with-vpn">iOS (With VPN)</h5>
+<blockquote>
+  <p>With VPN or some other software that blocks Captive Detector Installed</p>
+</blockquote>
+
+<ul>
+  <li>Normally, there is a local Push-notification raise instead of CPMB.</li>
+  <li>Observed in iOS 11+</li>
+</ul>
+
+<h5 id="ios-with-auto-connect-disabled">iOS (With “Auto-Connect” disabled)</h5>
+<blockquote>
+  <p>With “Auto-connect” selector in the Wi-Fi SSID settings switched off.</p>
+</blockquote>
+
+<ul>
+  <li>The CPMB does not display automatically. Manual redirection from a browser is needed.</li>
+  <li>Observed in iOS 6+</li>
+</ul>
+
+<p><a name="android-google-anchor"></a></p>
+<h3 id="android-google">Android (Google)</h3>
+
+<ul>
+  <li>
+    <p>The Android OS determines the existence of the captive portal by attempting to access a list of domains (See appendix for complete list). If the domains are accessible, it can assume that it is not constrained by a captive portal. Otherwise, it will trigger the notification.</p>
+  </li>
+  <li>
+    <p>When clicked, users are redirected to CPMB.</p>
+  </li>
+  <li>
+    <p>PostAuth experience – Once a user has successfully authenticated, the mini-browser may be hidden automatically or manually by pressing a button.</p>
+  </li>
+</ul>
+
+<p><a name="android-samsung-anchor"></a></p>
+<h3 id="android-samsung">Android (Samsung)</h3>
+
+<ul>
+  <li>
+    <p>Active Captive Portal - Notifies user about the need to log in by pushing the OS-level mini browser.</p>
+  </li>
+  <li>
+    <p>The Android OS determines the existence of the captive portal by attempting to access a list of domains (See appendix for complete list). If the domains are accessible, it can assume that it is not constrained by a captive portal. Otherwise, it will pops up Captive Portal or Full browser.</p>
+  </li>
+  <li>
+    <p>Post-auth experience – Once a user has successfully authenticated, the mini-browser may be hidden automatically or manually by pressing some special button.</p>
+  </li>
+  <li>
+    <p>It can be artificial ad block on CPMB in some Android devices.</p>
+  </li>
+</ul>
+
+<p><a name="macos-anchor"></a></p>
+<h3 id="macos">MacOS</h3>
+
+<ul>
+  <li>
+    <p>Native Mini-Browser – AKA “Captive Network Assistant” (CNA) - Notifies user about the need to log in by pushing the OS-level mini browser.</p>
+  </li>
+  <li>
+    <p>It displays a browser window that is 900px wide by 572px tall</p>
+  </li>
+  <li>
+    <p>Javascript methods window.alert() and window.confirm() do not work</p>
+  </li>
+</ul>
+
+<p><a name="windows-anchor"></a></p>
+<h3 id="windows-10">Windows 10</h3>
+
+<ul>
+  <li>Notifies user about the need to log in by opening the user’s default browser and attempting to redirect the user to a default HTTP destination which should be intercepted by the network.</li>
+</ul>
+
+<p><a name="chromeos-anchor"></a></p>
+<h3 id="chrome-os">Chrome OS</h3>
+
+<ul>
+  <li>
+    <p>Connection manager for Chrome OS attempts to retrieve the web page <a href="http://clients3.google.com/generate_204">http://clients3.google.com/generate_204</a>. This well known URL is known to return an empty page with an HTTP status 204. If for any reason the web page is not returned, or an HTTP response other than 204 is received, then shill marks the service as being in the portal state.</p>
+  </li>
+  <li>
+    <p>Other captive portals, sometimes run by cellular carriers, provide absolutely no IP connectivity other than to their own servers, but they use a standard DNS server and do not intercept HTTP requests. When a Chrome Book connects to this type of network, the HTTP requests fail because the TCP connection to clients3.google.com can never be established. The portal code tries multiple times for up to 10 seconds to connect to clients3.google.com. If it cannot connect it marks the service as being in a captive portal. This determination is somewhat unreliable because very high latency connections, lossy connections and other network issues can also result in failure to connect to clients3.google.com. All of these are indicative of a network that is not fully functional, but they do not necessarily indicate that the machine is stuck in a captive portal.</p>
+  </li>
+</ul>
+
+<p><a name="linux-anchor"></a></p>
+<h3 id="linux">Linux</h3>
+
+<h4 id="ubuntu">Ubuntu</h4>
+
+<ul>
+  <li>Doesn’t support OS level captive portal login in available LTS (long term support) releases so far. Now there is a discussion in Ubuntu WiKi networking section where it is proposed to provide OS level support in coming releases. GNOME (GNU Network Object Model Environment) had introduced automatic login prompt for Wi-Fi captive portals (Wi-Fi access points which required web based login, such as those found in public places) quite a while ago. However this functionality is still unavailable in Ubuntu GNOME, The same is part of wish-list in upcoming Ubuntu LTS releases.</li>
+</ul>
+
+<h4 id="linux-firefox-browser-installed">Linux (Firefox Browser Installed)</h4>
+
+<ul>
+  <li>
+    <p>Firefox introduces automatic detection of Captive portals and notifies user about the need to log in. Additionally, after Firefox detects a Captive portal, it replaces certificate error pages with a message encouraging user to log in.</p>
+  </li>
+  <li>
+    <p>Firefox determines the existence of a captive portal constraint by attempting to download the file success.txt from http://detectportal.firefox.com/success.txt (there is only one word in that file, the word “success”. If it can successfully retrieve that file, it can assume that it is not constrained by a Captive portal. Otherwise, it will trigger an in-browser notification.</p>
+  </li>
+</ul>
+
+<h4 id="linux-chrome-browser-installed">Linux (Chrome Browser Installed)</h4>
+
+<ul>
+  <li>Chrome introduces automatic detection of Captive portals and notifies user about the need to log in. Additionally, after Chrome detects a Captive portal, it replaces certificate error pages with a message encouraging user to log in.</li>
+</ul>
+
+<p><a name="fireos-anchor"></a></p>
+<h3 id="fireos">FireOS</h3>
+
+<ul>
+  <li>
+    <p>Fire OS (based on Android) uses http://spectrum.s3.amazonaws.com/kindle-wifi/wifistub.html for connectivity checks and if the URI is not reachable, a notification appears indicating a captive portal login is required.</p>
+  </li>
+  <li>
+    <p>Tapping the notifications triggers the the captive portal mini-browser to open, the device attempts to reach http://spectrum.s3.amazonaws.com/kindle-wifi/wifiredirect.html and the user is greeted with “Unsecured Connection. This connection is not secure. When using an unsecured connection, your personal information may be visible to others.” After clicking continue, the captive portal loads.</p>
+  </li>
+  <li>
+    <p>The Unsecured Connection warning appears to be triggered by the attempt to hit the “wifiredirect” page over HTTP, not because of a TLS certificate mismatch.</p>
+  </li>
+</ul>
+
+<p><a name="urls-anchor"></a></p>
+<h2 id="list-of-captive-portal-check-urls">List of captive portal check URLs</h2>
+
+<h3 id="apple-ios">Apple iOS</h3>
+<ul>
+  <li>www.apple.com</li>
+  <li>www.appleiphonecell.com</li>
+  <li>captive.apple.com</li>
+  <li>www.airport.us</li>
+  <li>www.ibook.info</li>
+  <li>www.itools.info</li>
+  <li>www.thinkdifferent.us</li>
+  <li>apple.com</li>
+</ul>
+
+<h3 id="apple-macos">Apple MacOS</h3>
+<ul>
+  <li>captive.apple.com</li>
+</ul>
+
+<h3 id="google-android">Google Android</h3>
+<ul>
+  <li>clients3.google.com</li>
+  <li>clients4.google.com</li>
+  <li>android.clients.google.com</li>
+  <li>connectivitycheck.android.com</li>
+  <li>connectivitycheck.gstatic.com</li>
+  <li>www.gstatic.com</li>
+  <li>www.google.com</li>
+  <li>www.androidbak.net</li>
+</ul>
+
+<h3 id="samsung-android">Samsung Android</h3>
+<ul>
+  <li>http://connectivitycheck.android.com/generate_204</li>
+  <li>http://connectivitycheck.gstatic.com/generate_204</li>
+  <li>d2uzsrnmmf6tds.cloudfront.net</li>
+</ul>
+
+<h3 id="htc-android">HTC Android</h3>
+<ul>
+  <li>clients3.google.com</li>
+</ul>
+
+<h3 id="windows">Windows</h3>
+<ul>
+  <li>msftncsi.com</li>
+</ul>
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        
+        <p class="copyright">captive-behavior maintained by <a href="https://github.com/wireless-broadband-alliance">wireless-broadband-alliance</a></p>
+        
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+  </body>
+</html>

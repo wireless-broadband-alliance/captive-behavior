@@ -10,6 +10,13 @@ The goal for this project is to document captive portal behavior across the vari
 
 This project is organized by the [Wireless Broadband Alliance](https://www.wballiance.com/) (WBA). The aim of the WBA, together with its 100+ members, is to secure an outstanding user experience through the global deployment of next generation Wireless. While the WBA organizes this project, anyone is encouraged to contribute. Please see the [GitHub repository](https://github.com/wireless-broadband-alliance/captive-behavior) to learn how or contact the [WBA](https://www.wballiance.com/contact-us/) to find out more.
 
+## Device Database
+
+[Go to Device Database](/device-list.html)
+
+[Go to Device Form](/device-form.html)
+
+
 ## Captive Network Portal Standards Whitepaper
 
 <a href="https://wballiance.com/captive-network-portal-standards/" style="float:right; padding:0 15px;"><img src="/assets/images/captive-portal-standards-whitepaper.png" style="width:170px;"></a>

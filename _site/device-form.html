@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=1419978b1c7f9118cbba0b947724e09df07f9193">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Device Form | captive-behavior</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Device Form" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Documentation of captive network portal behavior on different devices" />
+<meta property="og:description" content="Documentation of captive network portal behavior on different devices" />
+<link rel="canonical" href="http://localhost:4000/device-form.html" />
+<meta property="og:url" content="http://localhost:4000/device-form.html" />
+<meta property="og:site_name" content="captive-behavior" />
+<script type="application/ld+json">
+{"headline":"Device Form","description":"Documentation of captive network portal behavior on different devices","@type":"WebPage","url":"http://localhost:4000/device-form.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <!-- Global header -->
+    <div id="top_header">
+      <img src="/assets/images/wba-logo-small.png">
+    </div>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner" style="max-width:1280px;">
+          
+            <!--<a id="forkme_banner" href="https://github.com/wireless-broadband-alliance/captive-behavior">View on GitHub</a>-->
+          
+
+          <h1 id="project_title">Captive Network Portal Behavior</h1>
+          <h2 id="project_tagline">Documentation of captive network portal behavior on different devices</h2>
+
+          
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner" style="max-width:1280px;">
+        <h2 id="device-form">Device Form</h2>
+
+<link rel="stylesheet" style="text/css" href="/assets/css/bootstrap.css" />
+
+<form style="max-width:500px; margin: 0px auto;"></form>
+<div id="res" class="alert"></div>
+<script type="text/javascript" src="/assets/scripts/jquery.min.js"></script>
+
+<script type="text/javascript" src="/assets/scripts/underscore.js"></script>
+
+<script type="text/javascript" src="/assets/scripts/jsv.js"></script>
+
+<script type="text/javascript" src="/assets/scripts/jsonform.js"></script>
+
+<script type="text/javascript">
+$('form').jsonForm({
+  schema: {
+        "DeviceCode":
+        {
+            "type": "string",
+            "title": "Device Code",
+            "description":"The specific hardware model identifier from the device manufacturer, e.g. 'IPHONE12,5'"
+        },
+        "DeviceName":
+        {
+            "type": "string",
+            "title": "Device Name",
+            "description":"The friendly name of the device, e.g. 'iPhone 11 Pro Max'"
+        },
+        "DeviceManufacturer":
+        {
+            "type": "string",
+            "title": "Device Manufacturer",
+            "enum": [ "--","Apple Inc.", "Google", "Samsung", "Dell", "Huawei", "LG", "Motorola" ]
+        },
+        "DeviceOperatingSystem":
+        {
+            "type": "string",
+            "title": "Device Operating System",
+            "enum": [ "--","iOS", "iPadOS", "Android", "Windows", "macOS", "Linux", "Other" ]
+        },
+        "DeviceOperatingSystemVersion":
+        {
+            "type": "string",
+            "title": "Device Operating System Version",
+            "description":"The numbered operating system version of the OS selected above, e.g. '13' for iOS13, or '10' for Windows 10. Please use the number rather than the name, e.g. '10.15' insead of 'macOS Catalina'." 
+        },        
+        "DeviceType":
+        {
+            "type": "string",
+            "title": "Device Type",
+            "enum": [ "--","Mobile Phone", "Tablet", "Laptop Computer", "Wearable", "Gaming Console", "E-reader", "Other"]
+        },
+        "CNASupport":
+        {
+          "type": "array",
+          "title": "Captive Network Assistant Support",
+          "items": {
+            "type": "string",
+            "title": "Select one or more",
+            "enum": [
+              "Not Supported",
+              "Closes Automatically After Authentication"
+            ]
+          }
+        },
+        "CapPortSupport":
+        {
+          "type": "array",
+          "title": "Capport API Support",
+          "items": {
+            "type": "string",
+            "title": "Select one or more",
+            "enum": [
+              "Not Supported",
+              "Venue URL Supported",
+              "Other"
+            ]
+          }
+        },
+        "MACRandomization": {
+          "type": "array",
+          "title": "Default MAC Randomization Behavior",
+          "items": {
+            "type": "string",
+            "title": "Select one or more",
+            "enum": [
+              "None",
+              "When Scanning",
+              "When Connecting, Unique Per SSID",
+              "When Connecting, Unique Per Session",
+              "When Connecting, Unique Per Time Period",
+              "Other"
+            ]
+          }
+        }
+    },
+  form : [
+      "*",
+      {
+        "type": "actions",
+        "items": [
+          {
+            "type": "submit",
+            "title": "Submit"
+          }
+        ]
+      }
+  ],
+  onSubmit: function (errors, values) {
+    if (errors) {
+      $('#res').html('<p>Errors found.</p>');
+    }
+    else {
+      $('#res').html('<p>' + values.DeviceCode + ' Submitted.');
+      $('form').hide();
+
+      console.log(JSON.stringify(values));
+        $.ajax({
+          type: "POST",
+          url: "https://z8qsxm6yxb.execute-api.us-west-2.amazonaws.com/dbd",
+          data: JSON.stringify(values),
+          success: function(){
+            console.log("Success");
+          },
+          dataType: "json"
+        });
+    }
+}});
+</script>
+
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner" style="max-width:1280px;">
+        
+        <p class="copyright">captive-behavior maintained by <a href="https://github.com/wireless-broadband-alliance">wireless-broadband-alliance</a></p>
+        
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+  </body>
+</html>

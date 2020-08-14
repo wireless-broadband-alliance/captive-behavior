@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=1419978b1c7f9118cbba0b947724e09df07f9193">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Device Database | captive-behavior</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Device Database" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Documentation of captive network portal behavior on different devices" />
+<meta property="og:description" content="Documentation of captive network portal behavior on different devices" />
+<link rel="canonical" href="http://localhost:4000/device-list.html" />
+<meta property="og:url" content="http://localhost:4000/device-list.html" />
+<meta property="og:site_name" content="captive-behavior" />
+<script type="application/ld+json">
+{"headline":"Device Database","description":"Documentation of captive network portal behavior on different devices","@type":"WebPage","url":"http://localhost:4000/device-list.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <!-- Global header -->
+    <div id="top_header">
+      <img src="/assets/images/wba-logo-small.png">
+    </div>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner" style="max-width:1280px;">
+          
+            <!--<a id="forkme_banner" href="https://github.com/wireless-broadband-alliance/captive-behavior">View on GitHub</a>-->
+          
+
+          <h1 id="project_title">Captive Network Portal Behavior</h1>
+          <h2 id="project_tagline">Documentation of captive network portal behavior on different devices</h2>
+
+          
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner" style="max-width:1280px;">
+        <h2 id="device-database">Device Database</h2>
+
+<link href="/assets/css/tidy-table.css" rel="stylesheet" type="text/css" />
+
+<script src="/assets/scripts/tidy-table.min.js"></script>
+
+<script>
+
+// Define top level table columns here, no spaces
+var columns= [
+  'DeviceCode',
+  'DeviceName', 
+  'DeviceManufacturer',
+  'DeviceType',
+  'WlanType',
+  'WlanFreq2.4G',
+  'WlanFreq5g',
+  'WlanFreq6',
+  'CNADoc',
+  'Hotspot2Capable',
+  'NewFeature'
+];
+
+var formatted_columns = []
+for(var i=0; i< columns.length; i++){
+  formatted_columns.push( displayCamelCase(columns[i]) );
+}
+
+function displayCamelCase (str){
+  result = str.replace( /([A-Z])/g, " $1" );
+  return result.charAt(0).toUpperCase() + result.slice(1);
+}
+
+function prepareRow (obj) {
+  var tableRow = [];  
+  for( var i=0; i < columns.length; i++) {
+    var col = columns[i];
+    if( col in obj){
+      tableRow.push(obj[col])  
+    }
+    else {
+      tableRow.push(false)
+    }
+  }
+  return tableRow;
+}
+
+// checkmarks and x marks
+function postProcessTableData(elem){
+  
+  var element_value = elem.getAttribute('title');
+
+  if(element_value === "true" ){
+    elem.innerHTML = '<span class="checkmark">&#10003;</span>'
+  }
+  else if ( element_value === "false" ){
+    elem.innerHTML = '<span class="x-mark">&#10007;</span>';
+  }
+  else if ( element_value.startsWith("/") ){
+  	elem.innerHTML = '<a href="' + element_value + '" target="_blank">Link</a>';
+  }
+  
+}
+
+function buildTable(data, containerId){
+ 
+// Prepare Data
+ var tableData = [];
+  for( var i=0; i < data.length; i++){
+    tableData.push( prepareRow(data[i]) );
+  }
+
+// Build tidy table
+document.getElementById(containerId)
+ .TidyTable({
+   enableCheckbox: false,
+   enableMenu:     false,
+   responsive:     true
+ },
+ {
+   columnTitles: formatted_columns,
+   columnValues: tableData,
+  
+  // post-process DOM elements
+  postProcess: {
+    column: postProcessTableData
+  },
+
+   // pre-process column values before sort (optional)
+   sortByPattern: function(col_num, val) {
+     if (col_num != 1) return val;
+
+     return String(val).replace(/$|%|#/g, '');
+   }
+ });
+}
+
+// Main page load event
+window.addEventListener('load', function() {
+
+	var request = new XMLHttpRequest();
+	request.open('GET', '/assets/data/devices.json', true);
+
+	request.onload = function() {
+	  if (request.status >= 200 && request.status < 400) {
+	    // Success!
+	    var data = JSON.parse(request.responseText);
+	    buildTable(data, "container");
+	  } else {
+	    // We reached our target server, but it returned an error
+	    console.log("Could not retrieve devices JSON file")
+	  }
+	};
+
+	request.onerror = function() {
+	  // There was a connection error of some sort
+	   console.log("Connection error")
+	};
+
+	request.send();
+});
+</script>
+
+<div id="container"></div>
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner" style="max-width:1280px;">
+        
+        <p class="copyright">captive-behavior maintained by <a href="https://github.com/wireless-broadband-alliance">wireless-broadband-alliance</a></p>
+        
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+  </body>
+</html>

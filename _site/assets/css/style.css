@@ -271,3 +271,7 @@ body, h1, h2, h3, h4, h5, h6 { font-family: 'Asap', sans-serif !important; }
 #top_header { background: #0061a1; height: 50px; padding: 0; position: relative; }
 
 #top_header img { padding: 0; height: 50px; margin: 0; position: absolute; right: 0; border: none; box-shadow: none; }
+
+.checkmark { color: green; font-size: 20px; font-weight: bold; }
+
+.x-mark { color: red; font-size: 20px; font-weight: bold; }

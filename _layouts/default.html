@@ -20,7 +20,7 @@
 
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
-        <header class="inner">
+        <header class="inner" style="max-width:1280px;">
           {% if site.github.is_project_page %}
             <!--<a id="forkme_banner" href="{{ site.github.repository_url }}">View on GitHub</a>-->
           {% endif %}
@@ -39,14 +39,14 @@
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
+      <section id="main_content" class="inner" style="max-width:1280px;">
         {{ content }}
       </section>
     </div>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
-      <footer class="inner">
+      <footer class="inner" style="max-width:1280px;">
         {% if site.github.is_project_page %}
         <p class="copyright">{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
         {% endif %}

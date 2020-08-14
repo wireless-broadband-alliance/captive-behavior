@@ -1,0 +1,130 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties":
+    {
+        "DeviceCode":
+        {
+            "type": "string"
+        },
+        "DeviceName":
+        {
+            "type": "string"
+        },
+        "DeviceManufacturer":
+        {
+            "type": "string"
+        },
+        "DeviceOperatingSystem":
+        {
+            "type": "string"
+        },
+        "DeviceType":
+        {
+            "type": "string"
+        },
+        "DeviceDoc":
+        {
+            "type": "string"
+        },
+        "CNASupport":
+        {
+            "type": "boolean"
+        },
+        "CNADoc":
+        {
+            "type": "string"
+        },
+        "CapPortSupport":
+        {
+            "type": "boolean"
+        },
+        "CapPortDoc":
+        {
+            "type": "string"
+        },
+        "Hotspot2Capable":
+        {
+            "type": "boolean"
+        },
+        "Hotspot2r1ProvisioningSupport":
+        {
+            "type": "boolean"
+        },
+        "Hotspot2r1ProvisioningDoc":
+        {
+            "type": "string"
+        },
+        "Hotspot2r2ProvisioningSupport":
+        {
+            "type": "boolean"
+        },
+        "Hotspot2r2ProvisioningDoc":
+        {
+            "type": "string"
+        },
+        "Hotspot2r3ProvisioningSupport":
+        {
+            "type": "boolean"
+        },
+        "Hotspot2r3ProvisioningDoc":
+        {
+            "type": "string"
+        },
+        "WlanType":
+        {
+            "type": "string"
+        },
+        "WlanFreq24gt":
+        {
+            "type": "boolean"
+        },
+        "WlanFreq5g":
+        {
+            "type": "boolean"
+        },
+        "WlanFreq6g":
+        {
+            "type": "boolean"
+        },
+        "3gSupport":
+        {
+            "type": "boolean"
+        },
+        "4gSupport":
+        {
+            "type": "boolean"
+        },
+        "5gSupport":
+        {
+            "type": "boolean"
+        }
+    },
+    "required":
+    [
+        "DeviceCode",
+        "DeviceName",
+        "DeviceManufacturer",
+        "DeviceOperatingSystem",
+        "DeviceType",
+        "DeviceDoc",
+        "CNASupport",
+        "CNADoc",
+        "CapPortSupport",
+        "CapPortDoc",
+        "Hotspot2Capable",
+        "Hotspot2r1ProvisioningSupport",
+        "Hotspot2r1ProvisioningDoc",
+        "Hotspot2r2ProvisioningSupport",
+        "Hotspot2r2ProvisioningDoc",
+        "Hotspot2r3ProvisioningSupport",
+        "Hotspot2r3ProvisioningDoc",
+        "WlanType",
+        "WlanFreq24gt",
+        "WlanFreq5g",
+        "WlanFreq6g",
+        "3gSupport",
+        "4gSupport",
+        "5gSupport"
+    ]
+}

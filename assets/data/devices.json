@@ -1,27 +1,22 @@
 [
 {
-   "DeviceCode": "GOOGLEPIXEL3A",
-   "DeviceName": "Google Pixel 3A",
-   "DeviceManufacturer": "Google",
-   "DeviceType": "Handset",
-   "DeviceDoc": "",
-   "CNASupport": true,
-   "CNADoc": "/pages/android-google-latest-cna.html",
-   "CapPortSupport": false,
-   "CapPortDoc": "",
-   "PasspointCapable": true,
-   "Passpointr1ProvisioningSupport": true,
-   "Passpointr1ProvisioningDoc": "https://github.com/xxxxxxxxx",
-   "Passpointr2ProvisioningSupport": true,
-   "Passpointr2ProvisioningDoc": "https://github.com/xxxxxxxxx",
-   "Passpointr3ProvisioningSupport": true,
-   "Passpointr3ProvisioningDoc": "https://github.com/xxxxxxxxx",
-   "WlanType": "WiFi6",
-   "WlanFreq2.4gt": true,
-   "WlanFreq5g": true,
-   "WlanFreq6g": true,
-   "3gSupport": true,
-   "4gSupport": true,
-   "5gSupport": true
+    "DeviceCode": "Test",
+    "DeviceName": "test",
+    "DeviceManufacturer": "Apple Inc.",
+    "DeviceOperatingSystem": "iPadOS",
+    "DeviceOperatingSystemMajorVersion": "test",
+    "DeviceOperatingSystemMinorVersion": "test",
+    "DeviceType": "Mobile Phone",
+    "CNASupport": [
+        "Supported, Closes Automatically After Authentication",
+        "Not Supported"
+    ],
+    "CapPortSupport": [
+        "Venue URL Supported"
+    ],
+    "MACRandomization": [
+        "When Scanning",
+        "When Connecting, Unique Per SSID"
+    ]
 }
 ]

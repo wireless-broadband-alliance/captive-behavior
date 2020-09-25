@@ -15,8 +15,7 @@ var columns= [
   'WlanFreq5g',
   'WlanFreq6',
   'CNADoc',
-  'PasspointR2Capable',
-  'NewFeature'
+  'PasspointR2Capable'
 ];
 
 var formatted_columns = []

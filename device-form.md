@@ -73,7 +73,7 @@ $('form').jsonForm({
               "Not Supported",
               "Venue URL Supported",
               "Time Left Supported",
-              "Extend Session Supported"
+              "Extend Session Supported",
               "Other"
             ]
           }

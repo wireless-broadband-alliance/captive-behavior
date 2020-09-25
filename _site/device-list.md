@@ -15,7 +15,7 @@ var columns= [
   'WlanFreq5g',
   'WlanFreq6',
   'CNADoc',
-  'Hotspot2Capable',
+  'PasspointR2Capable',
   'NewFeature'
 ];
 

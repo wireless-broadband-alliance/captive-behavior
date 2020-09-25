@@ -14,7 +14,7 @@ This project is organized by the [Wireless Broadband Alliance](https://www.wball
 
 [Go to Device Database](/device-list.html)
 
-[Go to Device Form](/device-form.html)
+[Go to Device Submission Form](/device-form.html)
 
 
 ## Captive Network Portal Standards Whitepaper

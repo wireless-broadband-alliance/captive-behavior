@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,maximum-scale=2">
     <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=1419978b1c7f9118cbba0b947724e09df07f9193">
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=654151d26a71df6d5264b9f3b95786b628d3f183">
 
 <!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Device Form | captive-behavior</title>
@@ -33,7 +33,7 @@
 
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
-        <header class="inner" style="max-width:1280px;">
+        <header class="inner" style="max-width:1040px;">
           
             <!--<a id="forkme_banner" href="https://github.com/wireless-broadband-alliance/captive-behavior">View on GitHub</a>-->
           
@@ -47,7 +47,7 @@
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner" style="max-width:1280px;">
+      <section id="main_content" class="inner" style="max-width:1040px;">
         <h2 id="device-form">Device Form</h2>
 
 <link rel="stylesheet" style="text/css" href="/assets/css/bootstrap.css" />
@@ -89,12 +89,18 @@ $('form').jsonForm({
             "title": "Device Operating System",
             "enum": [ "--","iOS", "iPadOS", "Android", "Windows", "macOS", "Linux", "Other" ]
         },
-        "DeviceOperatingSystemVersion":
+        "DeviceOperatingSystemMajorVersion":
+        {
+            "type": "string",
+            "title": "Device Operating System Major Version",
+            "description":"The numbered operating system major version of the OS selected above, e.g. '13' for iOS13, or '10' for Windows 10. Please use the number rather than the name, e.g. '10.15' instead of 'macOS Catalina'." 
+        },
+        "DeviceOperatingSystemMinorVersion":
         {
             "type": "string",
             "title": "Device Operating System Version",
-            "description":"The numbered operating system version of the OS selected above, e.g. '13' for iOS13, or '10' for Windows 10. Please use the number rather than the name, e.g. '10.15' insead of 'macOS Catalina'." 
-        },        
+            "description":"The numbered operating system minor version of the OS selected above, e.g. '13.5' for iOS13, or '10.0' for Windows 10. Please use the number rather than the name, e.g. '10.15.1' instead of 'macOS Catalina'." 
+        },      
         "DeviceType":
         {
             "type": "string",
@@ -103,16 +109,13 @@ $('form').jsonForm({
         },
         "CNASupport":
         {
-          "type": "array",
+          "type": "string",
           "title": "Captive Network Assistant Support",
-          "items": {
-            "type": "string",
-            "title": "Select one or more",
-            "enum": [
+          "enum": [
               "Not Supported",
-              "Closes Automatically After Authentication"
+              "Supported, Closes Automatically After Authentication",
+              "Supported, Stays Open After Authentication",
             ]
-          }
         },
         "CapPortSupport":
         {
@@ -124,6 +127,8 @@ $('form').jsonForm({
             "enum": [
               "Not Supported",
               "Venue URL Supported",
+              "Time Left Supported",
+              "Extend Session Supported"
               "Other"
             ]
           }
@@ -143,7 +148,13 @@ $('form').jsonForm({
               "Other"
             ]
           }
-        }
+        },
+        "Comments":
+        {
+            "type": "string",
+            "title": "Additional Comments",
+            "description":"If you have addtional information you want us to capture you can put that here." 
+        }        
     },
   form : [
       "*",
@@ -164,17 +175,17 @@ $('form').jsonForm({
     else {
       $('#res').html('<p>' + values.DeviceCode + ' Submitted.');
       $('form').hide();
+      //console.log(JSON.stringify(values));
 
-      console.log(JSON.stringify(values));
-        $.ajax({
-          type: "POST",
-          url: "https://z8qsxm6yxb.execute-api.us-west-2.amazonaws.com/dbd",
-          data: JSON.stringify(values),
-          success: function(){
-            console.log("Success");
-          },
-          dataType: "json"
-        });
+      $.ajax({
+        type: "POST",
+        url: "https://u5qjgjp6y2.execute-api.eu-west-2.amazonaws.com/dbd",
+        data: JSON.stringify(values),
+        success: function(){
+          console.log("Success");
+        },
+        dataType: "json"
+      });
     }
 }});
 </script>
@@ -185,7 +196,7 @@ $('form').jsonForm({
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
-      <footer class="inner" style="max-width:1280px;">
+      <footer class="inner" style="max-width:1040px;">
         
         <p class="copyright">captive-behavior maintained by <a href="https://github.com/wireless-broadband-alliance">wireless-broadband-alliance</a></p>
         

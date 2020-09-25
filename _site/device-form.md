@@ -34,12 +34,18 @@ $('form').jsonForm({
             "title": "Device Operating System",
             "enum": [ "--","iOS", "iPadOS", "Android", "Windows", "macOS", "Linux", "Other" ]
         },
-        "DeviceOperatingSystemVersion":
+        "DeviceOperatingSystemMajorVersion":
+        {
+            "type": "string",
+            "title": "Device Operating System Major Version",
+            "description":"The numbered operating system major version of the OS selected above, e.g. '13' for iOS13, or '10' for Windows 10. Please use the number rather than the name, e.g. '10.15' instead of 'macOS Catalina'." 
+        },
+        "DeviceOperatingSystemMinorVersion":
         {
             "type": "string",
             "title": "Device Operating System Version",
-            "description":"The numbered operating system version of the OS selected above, e.g. '13' for iOS13, or '10' for Windows 10. Please use the number rather than the name, e.g. '10.15' insead of 'macOS Catalina'." 
-        },        
+            "description":"The numbered operating system minor version of the OS selected above, e.g. '13.5' for iOS13, or '10.0' for Windows 10. Please use the number rather than the name, e.g. '10.15.1' instead of 'macOS Catalina'." 
+        },      
         "DeviceType":
         {
             "type": "string",
@@ -48,16 +54,13 @@ $('form').jsonForm({
         },
         "CNASupport":
         {
-          "type": "array",
+          "type": "string",
           "title": "Captive Network Assistant Support",
-          "items": {
-            "type": "string",
-            "title": "Select one or more",
-            "enum": [
+          "enum": [
               "Not Supported",
-              "Closes Automatically After Authentication"
+              "Supported, Closes Automatically After Authentication",
+              "Supported, Stays Open After Authentication",
             ]
-          }
         },
         "CapPortSupport":
         {
@@ -69,6 +72,8 @@ $('form').jsonForm({
             "enum": [
               "Not Supported",
               "Venue URL Supported",
+              "Time Left Supported",
+              "Extend Session Supported"
               "Other"
             ]
           }
@@ -88,7 +93,13 @@ $('form').jsonForm({
               "Other"
             ]
           }
-        }
+        },
+        "Comments":
+        {
+            "type": "string",
+            "title": "Additional Comments",
+            "description":"If you have addtional information you want us to capture you can put that here." 
+        }        
     },
   form : [
       "*",
@@ -109,17 +120,17 @@ $('form').jsonForm({
     else {
       $('#res').html('<p>' + values.DeviceCode + ' Submitted.');
       $('form').hide();
+      //console.log(JSON.stringify(values));
 
-      console.log(JSON.stringify(values));
-        $.ajax({
-          type: "POST",
-          url: "https://z8qsxm6yxb.execute-api.us-west-2.amazonaws.com/dbd",
-          data: JSON.stringify(values),
-          success: function(){
-            console.log("Success");
-          },
-          dataType: "json"
-        });
+      $.ajax({
+        type: "POST",
+        url: "https://u5qjgjp6y2.execute-api.eu-west-2.amazonaws.com/dbd",
+        data: JSON.stringify(values),
+        success: function(){
+          console.log("Success");
+        },
+        dataType: "json"
+      });
     }
 }});
 </script>

@@ -14,43 +14,50 @@ $('form').jsonForm({
         {
             "type": "string",
             "title": "Device Code",
-            "description":"The specific hardware model identifier from the device manufacturer, e.g. 'IPHONE12,5'"
+            "description":"The specific hardware model identifier from the device manufacturer, e.g. 'IPHONE12,5'",
+            "required": true
         },
         "DeviceName":
         {
             "type": "string",
             "title": "Device Name",
-            "description":"The friendly name of the device, e.g. 'iPhone 11 Pro Max'"
+            "description":"The friendly name of the device, e.g. 'iPhone 11 Pro Max'",
+            "required": true
         },
         "DeviceManufacturer":
         {
             "type": "string",
             "title": "Device Manufacturer",
-            "enum": [ "--","Apple Inc.", "Google", "Samsung", "Dell", "Huawei", "LG", "Motorola" ]
+            "enum": [ "--","Apple Inc.", "Google", "Samsung", "Dell", "Huawei", "LG", "Motorola" ],
+            "required": true
         },
         "DeviceOperatingSystem":
         {
             "type": "string",
             "title": "Device Operating System",
-            "enum": [ "--","iOS", "iPadOS", "Android", "Windows", "macOS", "Linux", "Other" ]
+            "enum": [ "--","iOS", "iPadOS", "Android", "Windows", "macOS", "Linux", "Other" ],
+            "required": true
         },
         "DeviceOperatingSystemMajorVersion":
         {
             "type": "string",
             "title": "Device Operating System Major Version",
-            "description":"The numbered operating system major version of the OS selected above, e.g. '13' for iOS13, or '10' for Windows 10. Please use the number rather than the name, e.g. '10.15' instead of 'macOS Catalina'." 
+            "description":"The numbered operating system major version of the OS selected above, e.g. '13' for iOS13, or '10' for Windows 10. Please use the number rather than the name, e.g. '10.15' instead of 'macOS Catalina'.",
+            "required": true
         },
         "DeviceOperatingSystemMinorVersion":
         {
             "type": "string",
             "title": "Device Operating System Version",
-            "description":"The numbered operating system minor version of the OS selected above, e.g. '13.5' for iOS13, or '10.0' for Windows 10. Please use the number rather than the name, e.g. '10.15.1' instead of 'macOS Catalina'." 
+            "description":"The numbered operating system minor version of the OS selected above, e.g. '13.5' for iOS13, or '10.0' for Windows 10. Please use the number rather than the name, e.g. '10.15.1' instead of 'macOS Catalina'.",
+            "required": true
         },      
         "DeviceType":
         {
             "type": "string",
             "title": "Device Type",
-            "enum": [ "--","Mobile Phone", "Tablet", "Laptop Computer", "Wearable", "Gaming Console", "E-reader", "Other"]
+            "enum": [ "--","Mobile Phone", "Tablet", "Laptop Computer", "Wearable", "Gaming Console", "E-reader", "Other"],
+            "required": true
         },
         "CNASupport":
         {
@@ -60,7 +67,8 @@ $('form').jsonForm({
               "Not Supported",
               "Supported, Closes Automatically After Authentication",
               "Supported, Stays Open After Authentication",
-            ]
+            ],
+            "required": true
         },
         "CapPortSupport":
         {
@@ -91,7 +99,8 @@ $('form').jsonForm({
               "When Connecting, Unique Per Session",
               "When Connecting, Unique Per Time Period",
               "Other"
-            ]
+            ],
+            "required": true
           }
         },
         "Comments":
